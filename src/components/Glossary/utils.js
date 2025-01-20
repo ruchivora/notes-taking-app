@@ -34,27 +34,26 @@ export async function getGlossaryData(plainText) {
 
 export function highlightGlossaryTerms(plainText, glossaryData) {
   let highlightedText = plainText;
+  /* Brute force approach */
+  for (let i = 0; i < glossaryData.length; i++) {
+    const { term, explanation } = glossaryData[i];
 
-  glossaryData.forEach(({ term, explanation }) => {
-    // Escape any special characters in the term
-    const escapedTerm = escapeRegExp(term);  
-    // Word boundary for accurate matching
-    const regex = new RegExp(`\\b${escapedTerm}\\b`, 'gi');  
-    
-    // Replace all instances of the term (case-insensitive) with the highlighted version
-    highlightedText = highlightedText.replace(regex, (match) => {
-      return `<strong title="${explanation}">${match}</strong>`;
-    });
-  });
+    const words = highlightedText.split(' ');
+
+    for (let j = 0; j < words.length; j++) {
+      const word = words[j];
+
+      if (word.toLowerCase() === term.toLowerCase() && !explanation.toLowerCase().includes(word.toLowerCase())) {
+        words[j] = `<strong title="${explanation}">${word}</strong>`;
+      }
+    }
+
+    // Join the words back into a string
+    highlightedText = words.join(' ');
+  }
 
   return highlightedText;
 }
-
-function escapeRegExp(string) {
-  // Escapes special characters
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');  
-}
-
 
 
 export function convertHTMLStringToText(htmlString) {

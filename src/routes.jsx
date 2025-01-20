@@ -22,6 +22,13 @@ const router = createBrowserRouter([
     path: "/editNote/:id",
     element: <EditNote />,
   },
+  {
+    path: "*",
+    element: <Navigate 
+      to="/myNotes" 
+      replace />,
+  },
 ]);
+/* Quick fix for netlify */
 
 export default router;

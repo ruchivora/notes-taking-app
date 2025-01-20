@@ -1,0 +1,13 @@
+.noteFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%
+}
+
+@media (max-width: 1000px) {
+  .noteFormContainer {
+    width: 90%
+  }
+}

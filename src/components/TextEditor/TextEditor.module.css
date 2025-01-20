@@ -1,0 +1,40 @@
+.textEditor {
+  border: 1px solid #c5d0de99;
+  border-radius: 12px;
+  background-color: white;
+  color: #888;
+}
+
+.textEditorToolBar {
+  border-bottom: 1px solid #c5d0de99;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.5rem;
+}
+
+.textEditorToolBar button {
+  background-color: #667eea;
+  border: none;
+  box-shadow: none;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.textEditor:focus {
+  border: 2px solid red !important;
+}
+
+.active {
+  font-weight: bold;
+  color: white;
+}
+
+.focused {
+  border: 1px solid blue;
+}
+
+.error {
+  border: 1px solid red !important;
+}

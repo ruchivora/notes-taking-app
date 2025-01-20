@@ -1,0 +1,11 @@
+.toggleButton {
+  display: flex;
+  justify-content: end;
+}
+
+.contentContainer {
+  background-color: white;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+}

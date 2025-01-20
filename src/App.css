@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  height: 100%; 
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.notesApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem 0.5rem;
+  }
+}
+

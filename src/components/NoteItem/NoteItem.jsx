@@ -12,7 +12,7 @@ import parse from 'html-react-parser';
 import { Glossary } from '../Glossary/Glossary';
 
 
-export function NoteItem({ noteItem }) {
+export function NoteItem({ noteItem, key }) {
 
   const [showContent, setShowContent] = useState(false);
   const [passwordState, setPasswordState] = useState({password: '', error: false,});
@@ -62,7 +62,9 @@ export function NoteItem({ noteItem }) {
 
 
   return (
-    <div className={styles.noteContainer}>
+    <div 
+      className={styles.noteContainer} 
+      key={key}>
 
       <div className={styles.noteCard}>
         <div className={styles.noteHeader}>

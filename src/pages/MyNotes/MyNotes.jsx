@@ -21,10 +21,10 @@ export function MyNotes() {
         variant={BUTTON_VARIANT.SIMPLE}
       />
 
-      {notesList.map((noteItem, index) => {
+      {notesList.map((noteItem) => {
         return (
           <NoteItem
-            key={index}
+            key={noteItem.id}
             noteItem={noteItem} />
         )
       })}

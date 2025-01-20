@@ -95,7 +95,7 @@ export function NoteForm({noteItem = {}}) {
       dispatch(addToList(newNote));
     }
   
-    navigate('/mynotes');
+    navigate('/');
   }
   
   function handleNoteTitleChange(event) {

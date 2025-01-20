@@ -18,7 +18,7 @@ export function NoteFormAction({onSubmit, id}) {
       />
 
       <Button 
-        onClick={() => navigate('/mynotes')}
+        onClick={() => navigate('/')}
         variant={BUTTON_VARIANT.CANCEL}
         name={'Cancel'}
       />

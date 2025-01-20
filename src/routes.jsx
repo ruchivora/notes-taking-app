@@ -6,12 +6,6 @@ import { EditNote } from "./pages/EditNote/EditNote";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate
-      to="/myNotes"
-      replace />
-  },
-  {
-    path: "/myNotes",
     element: <MyNotes />,
   },
   {
@@ -21,12 +15,6 @@ const router = createBrowserRouter([
   {
     path: "/editNote/:id",
     element: <EditNote />,
-  },
-  {
-    path: "*",
-    element: <Navigate 
-      to="/myNotes" 
-      replace />,
   },
 ]);
 /* Quick fix for netlify */

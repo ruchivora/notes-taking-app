@@ -4,7 +4,7 @@
 The Notes App is a user-friendly application designed to streamline the process of writing, formatting, and managing notes. It includes advanced features to ensure an efficient and enjoyable user experience.
 
 ## Pages
-1. **/myNotes**
+1. **/**
    - Displays a list of all saved notes.
    - Enables users to view, edit, and delete notes, with an additional option to view glossary for the created note. 
 
